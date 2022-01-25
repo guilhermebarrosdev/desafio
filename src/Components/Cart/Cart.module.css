@@ -1,0 +1,109 @@
+.div {
+  padding-top: 2rem;
+  display: flex;
+  background: #eee;
+  text-align: center;
+  justify-content: center;
+}
+
+.table {
+  width: 600px;
+  border-collapse: collapse;
+}
+
+.input {
+  font-weight: bold;
+  width: 6rem;
+  font-size: 1rem;
+  padding: 6px;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  all: unset;
+  min-width: 21px;
+  min-height: 45px;
+  margin: 17px;
+  padding: 0px;
+  background-image: linear-gradient(
+      to top,
+      transparent 0px,
+      transparent 16px,
+      #fff 16px,
+      #fff 26px,
+      transparent 26px,
+      transparent 35px,
+      #000 35px,
+      #000 36px,
+      transparent 36px,
+      transparent 40px
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px,
+      transparent 10px,
+      #000 10px,
+      #000 11px,
+      transparent 11px,
+      transparent 21px
+    );
+  transform: rotate(90deg) scale(0.8, 0.9);
+  cursor: pointer;
+}
+
+.nameProduct {
+  font-weight: bold;
+}
+
+button {
+  margin-left: 10px;
+}
+
+.clearCart {
+  box-shadow: inset 0px 1px 0px 0px #f29c93;
+  background: linear-gradient(to bottom, #ed2009 5%, #ce0100 100%);
+  background-color: #ed2009;
+  border-radius: 6px;
+  border: 1px solid #d83526;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 6px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #b23e35;
+}
+.clearCart:hover {
+  background: linear-gradient(to bottom, #ce0100 5%, #ed2009 100%);
+  background-color: #ce0100;
+}
+.clearCart:active {
+  position: relative;
+  top: 1px;
+}
+
+.buttonRemoveItem {
+  box-shadow: inset 0px 1px 0px 0px #f5978e;
+  background: linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+  background-color: #f24537;
+  border-radius: 6px;
+  border: 1px solid #d02718;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 12px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #810e05;
+}
+.buttonRemoveItem:hover {
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+  background-color: #c62d1f;
+}
+.buttonRemoveItem:active {
+  position: relative;
+  top: 1px;
+}

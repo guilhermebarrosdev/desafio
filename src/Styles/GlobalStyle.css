@@ -1,24 +1,19 @@
-body {
+* {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
+body,
+#root {
+  height: 100%;
+  background-color: #f4f4f4;
+}
+
 a {
   text-decoration: none;
   color: #000;
-}
-
-h1 {
-  font-size: 1.5rem;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  min-height: calc(100vh + 1rem);
 }
 
 .animeLeft {
@@ -35,6 +30,7 @@ h1 {
 }
 
 .loading {
+  margin: 0 auto;
   width: 200px;
   height: 200px;
   border-radius: 50%;

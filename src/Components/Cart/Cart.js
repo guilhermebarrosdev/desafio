@@ -20,35 +20,45 @@ const Cart = () => {
   }, 0);
 
   return (
-    <div className={`${styles.div} animeLeft`}>
+    <section className={`${styles.div} animeLeft`}>
       <table className={styles.table}>
-        <thead className={styles.thead}>
-          <th>Product</th>
-          <th>Quantity</th>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+          </tr>
         </thead>
         {Object.keys(cart.cart).map((key) => {
           const { product, quantity } = cart.cart[key];
           return (
-            <tr className={styles.tr} key={key}>
-              <td className={styles.td}>{product.name}</td>
-              <td className={styles.td}>
+            <tr key={key}>
+              <td className={styles.nameProduct}>{product.name}</td>
+              <td>
                 <input
                   className={styles.input}
                   type="number"
                   defaultValue={quantity}
                   onBlur={changeQuantity(key)}
                 />
-                <button onClick={remove(key)}>Remove item</button>
+                <button
+                  className={styles.buttonRemoveItem}
+                  onClick={remove(key)}
+                >
+                  Remove item
+                </button>
               </td>
             </tr>
           );
         })}
         <th>Total items</th>
-        <td className={styles.tdTotal}>
-          {totalItems} <button onClick={clear()}>Clear cart</button>
+        <td>
+          <strong>{totalItems} </strong>
+          <button className={styles.clearCart} onClick={clear()}>
+            Clear cart
+          </button>
         </td>
       </table>
-    </div>
+    </section>
   );
 };
 

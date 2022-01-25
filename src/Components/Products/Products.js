@@ -1,7 +1,7 @@
 import styles from './Products.module.css';
 import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CartContext } from './CartContext';
+import { CartContext } from '../Cart/CartContext';
 
 const Products = () => {
   const [products, setProducts] = useState(null);
@@ -32,23 +32,28 @@ const Products = () => {
   if (loading === true) return <div className="loading"></div>;
   if (products === null) return null;
   return (
-    <div className={`${styles.products} animeLeft`}>
-      {products.map((product) => (
-        <div className={styles.product}>
-          <h1 key={product.name}>{product.name}</h1>
-          <Link
-            className={styles.name}
-            to={`fruit/${product.id}`}
-            key={product.id}
-          >
-            most infos
-          </Link>
-          <button className={styles.button} onClick={add(product)}>
-            Cart +
-          </button>
-        </div>
-      ))}
-    </div>
+    <section className={`${styles.products} animeLeft`}>
+      <h1>All Fruits</h1>
+      <div className={styles.container}>
+        {products.map((product) => (
+          <div className={styles.product}>
+            <h3 className={styles.name} key={product.name}>
+              {product.name}
+            </h3>
+            <Link
+              className={styles.buttonInfo}
+              to={`fruit/${product.id}`}
+              key={product.id}
+            >
+              most info
+            </Link>
+            <button className={styles.buttonCart} onClick={add(product)}>
+              Cart +
+            </button>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

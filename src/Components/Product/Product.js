@@ -30,17 +30,20 @@ const Product = () => {
   return (
     <section className={`${styles.product} animeLeft`}>
       <div className={styles.description}>
-        <h1>Name: {product.name}</h1>
-        <h1>Genus: {product.genus}</h1>
-        <h1>Family: {product.family}</h1>
-        <h1>Order: {product.order}</h1>
+        <h2 className={styles.description}>Name: {product.name}</h2>
+        <h2 className={styles.description}>Genus: {product.genus}</h2>
+        <h2 className={styles.description}>Family: {product.family}</h2>
+        <h2 className={styles.description}>Order: {product.order}</h2>
       </div>
-      <br />
       <table className={styles.table}>
-        <h3>NUTRITION FACTS</h3>
-        <tr>
+        <thead>
+          <tr>
+            <h3>NUTRITION FACTS</h3>
+          </tr>
+        </thead>
+        <tbody>
           <td>carbohydrates: {product.nutritions.carbohydrates}</td>
-        </tr>
+        </tbody>
         <tr>
           <td>protein: {product.nutritions.protein}</td>
         </tr>
