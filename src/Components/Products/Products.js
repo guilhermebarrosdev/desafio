@@ -21,7 +21,9 @@ const Products = () => {
         const json = await response.json();
         setProducts(json);
       } catch (err) {
-        setError('Ocorreu um erro');
+        setError(
+          'Ocorreu um erro, necessário adicionar extensão Allow CORS para visualizar'
+        );
       } finally {
         setLoading(false);
       }
