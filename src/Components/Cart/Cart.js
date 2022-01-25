@@ -1,5 +1,6 @@
 import { useCart } from './CartContext';
 import styles from './Cart.module.css';
+import Head from '../Head/Head';
 
 const Cart = () => {
   const cart = useCart();
@@ -21,6 +22,7 @@ const Cart = () => {
 
   return (
     <section className={`${styles.div} animeLeft`}>
+      <Head title="Desafio | Cart" />
       <table className={styles.table}>
         <thead>
           <tr>
@@ -31,32 +33,38 @@ const Cart = () => {
         {Object.keys(cart.cart).map((key) => {
           const { product, quantity } = cart.cart[key];
           return (
-            <tr key={key}>
-              <td className={styles.nameProduct}>{product.name}</td>
-              <td>
-                <input
-                  className={styles.input}
-                  type="number"
-                  defaultValue={quantity}
-                  onBlur={changeQuantity(key)}
-                />
-                <button
-                  className={styles.buttonRemoveItem}
-                  onClick={remove(key)}
-                >
-                  Remove item
-                </button>
-              </td>
-            </tr>
+            <tbody key={key}>
+              <tr>
+                <td className={styles.nameProduct}>{product.name}</td>
+                <td>
+                  <input
+                    className={styles.input}
+                    type="number"
+                    defaultValue={quantity}
+                    onBlur={changeQuantity(key)}
+                  />
+                  <button
+                    className={styles.buttonRemoveItem}
+                    onClick={remove(key)}
+                  >
+                    Remove item
+                  </button>
+                </td>
+              </tr>
+            </tbody>
           );
         })}
-        <th>Total items</th>
-        <td>
-          <strong>{totalItems} </strong>
-          <button className={styles.clearCart} onClick={clear()}>
-            Clear cart
-          </button>
-        </td>
+        <thead>
+          <tr>
+            <th>Total items</th>
+            <td>
+              <strong>{totalItems} </strong>
+              <button className={styles.clearCart} onClick={clear()}>
+                Clear cart
+              </button>
+            </td>
+          </tr>
+        </thead>
       </table>
     </section>
   );

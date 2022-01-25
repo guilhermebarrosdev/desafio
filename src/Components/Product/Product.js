@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Head from '../Head/Head';
 import styles from './Product.module.css';
 
 const Product = () => {
@@ -29,6 +30,7 @@ const Product = () => {
   if (product === null) return null;
   return (
     <section className={`${styles.product} animeLeft`}>
+      <Head title={`Desafio | ${product.name} `} />
       <div className={styles.description}>
         <h2 className={styles.description}>Name: {product.name}</h2>
         <h2 className={styles.description}>Genus: {product.genus}</h2>
@@ -38,24 +40,26 @@ const Product = () => {
       <table className={styles.table}>
         <thead>
           <tr>
-            <h3>NUTRITION FACTS</h3>
+            <th>NUTRITION FACTS</th>
           </tr>
         </thead>
         <tbody>
-          <td>carbohydrates: {product.nutritions.carbohydrates}</td>
+          <tr>
+            <td>carbohydrates: {product.nutritions.carbohydrates}</td>
+          </tr>
+          <tr>
+            <td>protein: {product.nutritions.protein}</td>
+          </tr>
+          <tr>
+            <td>fat: {product.nutritions.fat}</td>
+          </tr>
+          <tr>
+            <td>calories: {product.nutritions.calories}</td>
+          </tr>
+          <tr>
+            <td>sugar: {product.nutritions.sugar}</td>
+          </tr>
         </tbody>
-        <tr>
-          <td>protein: {product.nutritions.protein}</td>
-        </tr>
-        <tr>
-          <td>fat: {product.nutritions.fat}</td>
-        </tr>
-        <tr>
-          <td>calories: {product.nutritions.calories}</td>
-        </tr>
-        <tr>
-          <td>sugar: {product.nutritions.sugar}</td>
-        </tr>
       </table>
     </section>
   );

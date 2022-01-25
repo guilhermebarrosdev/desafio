@@ -2,6 +2,7 @@ import styles from './Products.module.css';
 import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../Cart/CartContext';
+import Head from '../Head/Head';
 
 const Products = () => {
   const [products, setProducts] = useState(null);
@@ -33,13 +34,12 @@ const Products = () => {
   if (products === null) return null;
   return (
     <section className={`${styles.products} animeLeft`}>
+      <Head title="Desafio | Products" />
       <h1>All Fruits</h1>
       <div className={styles.container}>
         {products.map((product) => (
-          <div className={styles.product}>
-            <h3 className={styles.name} key={product.name}>
-              {product.name}
-            </h3>
+          <div className={styles.product} key={product.name}>
+            <h3 className={styles.name}>{product.name}</h3>
             <Link
               className={styles.buttonInfo}
               to={`fruit/${product.id}`}
