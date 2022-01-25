@@ -1,0 +1,24 @@
+.product {
+  display: flex;
+  justify-content: center;
+}
+
+.table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.table {
+  height: 300px;
+}
+
+.description {
+  margin-right: 130px;
+}
+
+.table h3 {
+  padding: 0 10px;
+}

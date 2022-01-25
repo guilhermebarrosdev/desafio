@@ -1,52 +1,41 @@
-import React from 'react';
 import styles from './Header.module.css';
 import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-
-const Nav = styled.nav`
-  margin-bottom: 2rem;
-`;
-
-const Ul = styled.ul`
-  display: flex;
-  padding: 0px;
-  margin: 0px;
-  list-style: none;
-`;
-
-const Li = styled.li`
-  margin-right: 1rem;
-`;
+import { useCart } from './CartContext';
 
 const Header = () => {
+  const cart = useCart();
+  const itemsCount = Object.keys(cart.cart).length;
+
   return (
-    <Nav>
-      <Ul>
-        <Li>
-          <NavLink
-            style={({ isActive }) => ({
-              background: isActive ? '#ddd' : '#eee',
-            })}
-            className={styles.link}
-            to="/"
-            end
-          >
-            Products
-          </NavLink>
-        </Li>
-        <Li>
-          <NavLink
-            style={({ isActive }) => ({
-              background: isActive ? '#ddd' : '#eee',
-            })}
-            className={styles.link}
-            to="cart"
-          >
-            Cart
-          </NavLink>
-        </Li>
-      </Ul>
-    </Nav>
+    <div className={styles.header}>
+      <nav>
+        <ul>
+          <li>
+            <NavLink
+              style={({ isActive }) => ({
+                background: isActive ? '#ddd' : '#eee',
+              })}
+              className={styles.link}
+              to="/"
+              end
+            >
+              Products
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              style={({ isActive }) => ({
+                background: isActive ? '#ddd' : '#eee',
+              })}
+              className={styles.link}
+              to="cart"
+            >
+              Cart {itemsCount > 0 && <span>({itemsCount})</span>}
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };
 

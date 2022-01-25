@@ -1,9 +1,9 @@
-import React from 'react';
+import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
     <div>
-      <footer>
+      <footer className={styles.footer}>
         © Developed by{' '}
         <a
           href="http://github.com/guilhermebarrosdev"
