@@ -8,7 +8,7 @@
 
 <h3 align="center">Desafio, construir uma aplicação web utilizando uma API pública. </h3>
 
-<p align="center">Descrição do App: Uma empresa te contrata para criar um e-commerce de hortifruti. Você precisa fazer a listagem dos produtos (Utilizando a API pública) e uma lógica de carrinho, utilizando states do React. Sinta-se à vontade para acrescentar qualquer funcionalidade que achar interessante. </p></p>
+<p align="center">Descrição do App: Uma empresa te contrata para criar um e-commerce de hortifruti. Você precisa fazer a listagem dos produtos (Utilizando a API pública) e uma lógica de carrinho, utilizando states do React.</p>
 
 ### Stack do Desafio: 
    - React
@@ -25,3 +25,5 @@
 ### Funcionalidades obrigatórias:
 
    - [x] Utilizar states do React para a lógica da página (Carrinho, listagem…)
+
+<h4 align="center">Cumpri todos os requisitos do teste, não tinha um desgin(wireframe) a ser seguido tentei deixar agradável de usar e visualizar e esta responsivo</h4>
