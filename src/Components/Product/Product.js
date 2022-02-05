@@ -65,11 +65,9 @@ const Product = () => {
         </tbody>
       </table>
       <div>
-        <button className={styles.buttonBack}>
-          <Link to="/" key={product.id}>
-            Back
-          </Link>
-        </button>
+        <Link className={styles.buttonBack} to="/" key={product.id}>
+          Back
+        </Link>
       </div>
     </section>
   );
