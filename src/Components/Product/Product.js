@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Head from '../Head/Head';
 import styles from './Product.module.css';
 
@@ -32,10 +32,13 @@ const Product = () => {
     <section className={`${styles.product} animeLeft`}>
       <Head title={`Desafio | ${product.name} `} />
       <div className={styles.description}>
-        <h2 className={styles.description}>Name: {product.name}</h2>
-        <h2 className={styles.description}>Genus: {product.genus}</h2>
-        <h2 className={styles.description}>Family: {product.family}</h2>
-        <h2 className={styles.description}>Order: {product.order}</h2>
+        <h2 className={styles.text}>Name: {product.name}</h2>
+        <hr />
+        <h2 className={styles.text}>Genus: {product.genus}</h2>
+        <hr />
+        <h2 className={styles.text}>Family: {product.family}</h2>
+        <hr />
+        <h2 className={styles.text}>Order: {product.order}</h2>
       </div>
       <table className={styles.table}>
         <thead>
@@ -61,6 +64,13 @@ const Product = () => {
           </tr>
         </tbody>
       </table>
+      <div>
+        <button className={styles.buttonBack}>
+          <Link to="/" key={product.id}>
+            Back
+          </Link>
+        </button>
+      </div>
     </section>
   );
 };

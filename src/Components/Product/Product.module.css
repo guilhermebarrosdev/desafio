@@ -1,5 +1,5 @@
 .product {
-  margin-top: 2rem;
+  margin: 5rem 0 49vh 0;
   color: #333;
   display: flex;
   justify-content: center;
@@ -16,8 +16,22 @@ td {
 .description {
   background: #eee;
   padding: 1rem;
+  margin-right: 1rem;
+  border: 1px solid black;
+}
+
+.text {
+  padding: 0.7rem;
 }
 
 .table h3 {
   padding: 1rem;
+}
+
+.buttonBack {
+  background: green;
+  color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 6px;
+  border: none;
 }
