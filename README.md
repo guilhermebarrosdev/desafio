@@ -1,25 +1,27 @@
-Nesse desafio, vamos querer que você construa uma aplicação web utilizando uma API pública que escolhemos especialmente para você.
+<h1 align="center"> Desafio vaga de emprego </h1>
 
-Descrição do App: Uma empresa te contrata para criar um e-commerce de hortifruti. Você precisa fazer a listagem dos produtos (Utilizando a API pública) e uma lógica de carrinho, utilizando states do React. Sinta-se à vontade para acrescentar qualquer funcionalidade que achar interessante.
+<h2 align="center"> Demonstração do projeto </h2>
 
-Stack do Desafio:
+<h1 align="center">
+    <img alt="Readme" title="Readme" src="Projeto.gif" />
+</h1>
 
-    - React
+<h3 align="center">Desafio, construir uma aplicação web utilizando uma API pública. </h3>
 
-    - Javascript
+<p align="center">Descrição do App: Uma empresa te contrata para criar um e-commerce de hortifruti. Você precisa fazer a listagem dos produtos (Utilizando a API pública) e uma lógica de carrinho, utilizando states do React. Sinta-se à vontade para acrescentar qualquer funcionalidade que achar interessante. </p></p>
 
-Páginas obrigatórias:
+### Stack do Desafio: 
+   - React
+   - Javascript
 
-    - Listagem dos produtos (Produtos da API pública).
+### Páginas obrigatórias:
 
-             - Nessa página, deve ser possível adicionar um item ao carrinho, e acessar o carrinho de alguma forma.
+   - [x] Listagem dos produtos (Produtos da API pública).
+   - [x] Nessa página, deve ser possível adicionar um item ao carrinho, e acessar o carrinho de alguma forma.
+   - [x] Carrinho de compras
+   - [x] Dentro do carrinho, devemos conseguir ver os produtos adicionados, alterar a quantidade de cada produto, deletar um item e limpar o carrinho.
+   - [x] Mostrar, de alguma forma, as informações nutricionais dos produtos.
 
-    - Carrinho de compras
+### Funcionalidades obrigatórias:
 
-             - Dentro do carrinho, devemos conseguir ver os produtos adicionados, alterar a quantidade de cada produto, deletar um item e limpar o carrinho.
-
-    - Mostrar, de alguma forma, as informações nutricionais dos produtos.
-
-Funcionalidades obrigatórias:
-
-    - Utilizar states do React para a lógica da página (Carrinho, listagem…)
+   - [x] Utilizar states do React para a lógica da página (Carrinho, listagem…)
