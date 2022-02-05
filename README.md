@@ -26,4 +26,4 @@
 
    - [x] Utilizar states do React para a lógica da página (Carrinho, listagem…)
 
-<h4 align="center">Cumpri todos os requisitos do teste, não tinha um desgin(wireframe) a ser seguido tentei deixar agradável de usar e visualizar e esta responsivo</h4>
+<h4 align="center">Cumpri todos os requisitos do teste, não tinha um desgin(wireframe) a ser seguido tentei deixar agradável de usar e visualizar e esta responsivo.</h4>
